@@ -21,9 +21,7 @@
             text-align: center;
 
         }
-        a:hover {
-            background-color: blue;
-        }
+
 
         .menu input{
             width: 300px;
@@ -137,9 +135,11 @@
 </div>
 <br><br><br><br>
 <center>
+    <h2>Welcome to Google Knowledge Graph Search!</h2> <br><br>
     <div class="container" cellspacing=500 >
 <input type="text" id="query" value="">
 <input type="button" id="enterApiKeys" value="Enter" />
+        <h2 style="text-align: center; color: #1ab188"> Top 15 Picks From Google Knowledge Graph Search </h2>
         </div>
 </center>
 
@@ -157,7 +157,7 @@
         var service_url = 'https://kgsearch.googleapis.com/v1/entities:search';
         var params = {
             'query': $("#query").val(),
-            'limit': 10,
+            'limit': 15,
             'indent': true,
             'key': 'AIzaSyBlSX2-4XIiKzELLXYIu7TMGf4t7CgUFqU',
         };
