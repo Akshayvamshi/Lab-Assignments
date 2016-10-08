@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="64dp"
+    android:paddingRight="64dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.nagar.camerademo.PhotoActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Home"
+        android:id="@+id/btn_photo_home"
+        android:onClick="redirectToHome"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/wallet_link_text_light" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Locate Me"
+        android:id="@+id/main_btn_maps"
+        android:onClick="onClickOfMapButton"
+        android:textColor="@color/wallet_link_text_light"
+        android:layout_above="@+id/btn_photo_home"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="19dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Home"
+        android:id="@+id/btn_photo_home"
+        android:onClick="redirectToHome"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/wallet_link_text_light" />
+
+    <ImageView
+        android:id="@+id/view_photo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:cropToPadding="false"
+        android:background="@drawable/cam"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Browse Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_browse"
+        android:onClick="onClickOfPhotoBrowse"
+        android:textColor="@android:color/holo_green_light"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/view_photo"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:id="@+id/btn_take_photo"
+        android:textColor="@android:color/holo_green_light"
+        android:layout_alignTop="@+id/btn_browse"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
