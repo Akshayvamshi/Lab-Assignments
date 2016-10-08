@@ -1,5 +1,5 @@
 # Lab-Assignments
-Lab Assignments
+Lab Assignments :
 
 Lab-1 : https://github.com/Akshayvamshi/Lab-Assignments/tree/master/Assignment-1
 
