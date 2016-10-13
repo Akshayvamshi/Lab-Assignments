@@ -1,0 +1,36 @@
+<ion-view title="Signup" id="page3">
+    <ion-content padding="true" style="background: url(img/LxDkczcYTOCSFqdPUaPG_3D-Parallax-Background2.png) no-repeat center;background-size:cover;" class="has-header">
+        <form id="signup-form2" class="list">
+            <ion-list id="signup-list2">
+                <label class="item item-input" id="signup-input3">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" name="fullname" ng-model="fullname" ng-minlength="6" required>
+                </label>
+                <label class="item item-input" id="signup-input4">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="" name="email" ng-model="email" required>
+                </label>
+                <label class="item item-input" id="signup-input5">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" name="password" ng-model="password" ng-minlength="6" required>
+                </label>
+            </ion-list>
+            <label class="item item-select" id="signup-select1">
+                <span class="input-label">Gender</span>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Prefer not to say</option>
+                </select>
+            </label>
+          <div class="padding">
+            <p ng-show="Signupform.fullname.$error.required">* Name is required</p>
+            <p ng-show="Signupform.email.$error.required">* Email id  is required</p>
+            <p ng-show="Signupform.username.$error.minlength">* Username must be longer than 6 characters</p>
+            <p ng-show="Signupform.password.$error.required">* Password is required</p>
+            <p ng-show="Signupform.password.$error.minlength">* Password must be longer than 6 characters</p>
+          </div>
+        </form>
+        <a ui-sref="ionicApp" id="signup-button3" class="button button-positive  button-block" ng-disabled="Signupform.$invalid">Sign up</a>
+    </ion-content>
+</ion-view>

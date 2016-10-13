@@ -1,0 +1,57 @@
+<ion-view title="Google Knowledge Graph" id="page5">
+    <ion-content padding="true" style="background: url(img/dWjP5LUZT46EBEfYp8Mg_3D-Parallax-Background2.png) no-repeat center;background-size:cover;" class="has-header">
+        <div>
+
+            <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+            <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+            <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+            <!--[if gt IE 8]><!-->
+            <!--<![endif]-->
+
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+
+
+            <center>
+                <h3>Google Knowledge Graph Search!</h3>
+                <br>
+                <h4 style="text-align: center; color: orange">Top 15 Picks From Google Knowledge Graph Search</h4>
+                <br>
+                <div class="container" cellspacing="500">
+                    <input type="text" id="query" value="">
+                    <input type="button" id="enterApiKeys" value="Enter">
+
+                </div>
+            </center>
+            <!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+            <script src="app.js"></script>
+            <script>
+                $("#enterApiKeys").click(function () {
+                    var service_url = 'https://kgsearch.googleapis.com/v1/entities:search';
+                    var params = {
+                      'query': $("#query").val(),
+                      'limit': 15,
+                      'indent': true,
+                      'key': 'AIzaSyBlSX2-4XIiKzELLXYIu7TMGf4t7CgUFqU',
+                    };
+                    $.getJSON(service_url + '?callback=?', params, function (response) {
+                      $.each(response.itemListElement, function (i, element) {
+                        $('<div>', {text: element['result']['name']}).appendTo(document.body);
+                      });
+                    });
+                  });
+            </script>
+
+
+
+        </div>
+    </ion-content>
+</ion-view>
